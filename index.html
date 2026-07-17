@@ -606,11 +606,11 @@
   .spec-strip .num small { font-size: 14px; color: var(--ink-soft); font-weight: 400; margin-left: 3px; letter-spacing: 0; }
   .spec-strip .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 0; line-height: 1.5; min-height: calc(11px * 1.5 * 2); display: flex; align-items: flex-start; }
 
-  /* Stats variant: short numeric headers, bigger type, centered, modest breakout */
+  /* Stats variant: short numeric headers, bigger type, centered, stays inside the column */
   .spec-strip.stats {
     background: var(--white);
-    margin-left: -80px;
-    margin-right: -80px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .spec-strip.stats .item { align-items: center; text-align: center; padding: 28px 16px; }
   .spec-strip.stats .item:first-child { padding-left: 16px; }
@@ -1113,12 +1113,12 @@
   @media (max-width: 1280px) {
     main.wrap { max-width: var(--maxw); }
     .article-grid { grid-template-columns: 200px minmax(0, 1fr) 260px; gap: 48px 64px; }
-    .spec-strip.stats { margin-left: -64px; margin-right: -64px; }
+    .spec-strip.stats { margin-left: 0; margin-right: 0; }
   }
   @media (max-width: 1100px) {
     .article-grid { grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
     .gutter { display: none; }
-    .spec-strip.stats { margin-left: -48px; margin-right: 0; }
+    .spec-strip.stats { margin-left: 0; margin-right: 0; }
     .trust-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 0;
